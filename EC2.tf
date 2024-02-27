@@ -1,4 +1,4 @@
-resource "aws_instance" "wordpress" {
+resource "aws_instance" "wordpress8" {
   ami                         = " ami-0208423bef18c17d1"
   instance_type               = "t3.micro"
   key_name                    = "JN"
