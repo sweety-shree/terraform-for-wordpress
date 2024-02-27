@@ -1,5 +1,5 @@
 resource "aws_instance" "wordpress8" {
-  ami                         = "ami-0208423bef18c17d1"
+  ami                         = "ami-02cc6142066a5587f"
   instance_type               = "t3.micro"
   key_name                    = "jenkins"
   vpc_security_group_ids      = [aws_security_group.web-sg.id]
