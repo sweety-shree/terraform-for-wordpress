@@ -1,9 +1,10 @@
 #!/bin/bash
-sudo yum update
-sudo yum -y install httpd
-sudo systemctl start httpd
-sudo systemctl enable httpd
-sudo yum -y install git
-git clone https://github.com/chintuu77/food.git
-sudo mv food/* /var/www/html/
-sudo systemctl restart httpd
+sudo yum -y install git docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo chmod 666 /var/run/docker.sock
+sudo usermod -a -G docker ec2-user
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+git clone https://github.com/chintuu77/wordpress.git 
+docker-compose up -d
