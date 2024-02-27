@@ -1,5 +1,5 @@
 resource "aws_security_group" "web-sg" {
-  vpc_id = aws_vpc.vivek.id
+  vpc_id = aws_vpc.sada.id
 
   ingress {
     from_port   = 80
