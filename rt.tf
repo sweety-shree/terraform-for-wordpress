@@ -1,11 +1,11 @@
 #route table creation
 
 resource "aws_route_table" "route" {
-  vpc_id = aws_vpc.vivek.id
+  vpc_id = aws_vpc.sada.id
 
   route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.vivek-gateway.id
+    gateway_id = aws_internet_gateway.sada-gateway.id
   }
   tags = {
     Name = "route to internet"
