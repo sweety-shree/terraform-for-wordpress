@@ -1,3 +1,4 @@
+#instance
 resource "aws_instance" "wordpress8" {
   ami                         = "ami-07761f3ae34c4478d"
   instance_type               = "t2.micro"
